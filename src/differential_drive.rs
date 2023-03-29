@@ -76,12 +76,7 @@ impl State {
     }
 
     pub fn propagate(&mut self, del_t: f64) -> Vector3<f64> {
-        // let iterations: u64 = (del_t/TIME_RESOLUTION) as u64;
-        // for _ in 0..iterations {
-            self.propagate_step(del_t);
-            // self.propagate_step(TIME_RESOLUTION);
-        // }
-
+        self.propagate_step(del_t);
         Vector3::new(self.x, self.y, self.yaw)
     }
 }
