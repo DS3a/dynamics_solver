@@ -1,5 +1,6 @@
 use nalgebra::{Matrix3, Vector2, Vector3};
 
+#[derive(Clone, Copy, Debug)]
 pub struct State {
     x: f64,
     y: f64,
