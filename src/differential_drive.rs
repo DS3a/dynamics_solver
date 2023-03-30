@@ -24,10 +24,16 @@ impl State {
         }
     }
 
+    pub fn set_state(&mut self, x_: f64, y_: f64, yaw_:f64) {
+        self.x = x_;
+        self.y = y_;
+        self.yaw = yaw_;
+    }
+
     fn update_icc(&mut self) {
         let curvature_radius: f64 = self.linear_velocity / self.angular_velocity;
 
-        if curvature_radius.abs() == f64::INFINITY {
+        if curvature_radius.is_infinite() {
             self.icc = None;
         } else {
             self.icc = Some(Vector2::new(
