@@ -2,9 +2,9 @@ use nalgebra::{Matrix3, Vector2, Vector3};
 
 #[derive(Clone, Copy, Debug)]
 pub struct State {
-    x: f64,
-    y: f64,
-    yaw: f64,
+    pub x: f64,
+    pub y: f64,
+    pub yaw: f64,
     linear_velocity: f64,
     angular_velocity: f64,
     icc: Option<Vector2<f64>>,
@@ -16,9 +16,9 @@ pub struct State {
 impl State {
     pub fn new(x: f64, y: f64, yaw: f64) -> Self {
         Self {
-            x,
-            y,
-            yaw,
+            pub x,
+            pub y,
+            pub yaw,
             linear_velocity: 0f64,  // in the direction of the +x axis
             angular_velocity: 0f64, // in the direction of the yaw axis, i.e., +z axis
             icc: None,
