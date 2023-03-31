@@ -16,9 +16,9 @@ pub struct State {
 impl State {
     pub fn new(x: f64, y: f64, yaw: f64) -> Self {
         Self {
-            pub x,
-            pub y,
-            pub yaw,
+            x,
+            y,
+            yaw,
             linear_velocity: 0f64,  // in the direction of the +x axis
             angular_velocity: 0f64, // in the direction of the yaw axis, i.e., +z axis
             icc: None,
